@@ -70,6 +70,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     function addToCart(productId) {
         const product = allProducts.find(p => p.id === productId);
+        
 
         // Check if the product is already in the cart
         const existingProduct = cart.find(item => item.id === productId);
@@ -82,6 +83,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         // Save the cart to localStorage
         localStorage.setItem('cart', JSON.stringify(cart));
 
+       
         // Update cart count
         updateCartCount();
     }
